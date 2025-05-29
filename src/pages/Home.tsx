@@ -1,3 +1,7 @@
 export default function Home() {
-  return <>Estou aqui</>;
+  return (
+    <>
+      <div className="flex justify-center items-center text-5xl">Em construção 🚧</div>
+    </>
+  );
 }
