@@ -1,10 +1,12 @@
 import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
-import { Code, Zap, Users, Trophy, ChevronRight, Play } from 'lucide-react';
+import { Code, Zap, Users, Trophy, ChevronRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
+      <Helmet title="Inicio" />
       <div className="fixed inset-0 bg-[linear-gradient(rgba(0,255,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,0,0.03)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none" />
 
       <Header />
@@ -68,7 +70,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Por que escolher a <span className="text-green-400">CodeCyber</span>?
+              Por que escolher a <span className="text-green-400">CyberCode</span>?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Nossa plataforma foi criada especialmente para jovens que querem entrar no mundo da
@@ -151,10 +153,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <Code className="h-6 w-6 text-green-400" />
-              <span className="text-lg font-bold text-green-400">CodeCyber</span>
+              <span className="text-lg font-bold text-green-400">CyberCode</span>
             </div>
             <div className="text-gray-400 text-sm">
-              © 2024 CodeCyber. Todos os direitos reservados.
+              © 2024 CyberCode. Todos os direitos reservados.
             </div>
           </div>
         </div>

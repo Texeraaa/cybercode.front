@@ -14,7 +14,7 @@ export default function Header() {
               <div className="absolute inset-0 h-8 w-8 text-green-400 animate-pulse opacity-50" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent">
-              CodeCyber
+              CyberCode
             </span>
           </div>
 
