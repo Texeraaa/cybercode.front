@@ -21,14 +21,14 @@ export default function Header() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
-              to="#"
+              to="/"
               className="text-gray-300 hover:text-green-400 transition-colors duration-300 relative group"
             >
               Início
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full" />
             </Link>
             <Link
-              to="#"
+              to="/curso"
               className="text-gray-300 hover:text-green-400 transition-colors duration-300 relative group"
             >
               C++
