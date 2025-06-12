@@ -29,27 +29,27 @@ export function AppSidebar() {
           ${open ? 'translate-x-0' : '-translate-x-full'}
           md:translate-x-0
           fixed md:static top-0 left-0 z-40
-          h-screen w-72 bg-[#121712] text-white flex flex-col pl-6 pr-2 py-8
+          h-screen w-72 bg-[#000000] text-white flex flex-col pl-6 pr-2 py-8
           transition-transform duration-300 ease-in-out
         `}
       >
         <MenuToggleButton open={open} toggle={() => setOpen(!open)} />
 
         <div className="flex flex-col gap-1">
-          <Link className="hover:bg-[#293829] p-3 rounded-xl" to="/">
+          <Link className="hover:bg-[#292929] p-3 rounded-xl" to="/">
             Visão Geral
           </Link>
-          <Link className="hover:bg-[#293829] p-3 rounded-xl" to="/">
+          <Link className="hover:bg-[#292929] p-3 rounded-xl" to="/">
             Q&A
           </Link>
-          <Link className="hover:bg-[#293829] p-3 rounded-xl" to="/">
+          <Link className="hover:bg-[#292929] p-3 rounded-xl" to="/">
             Notas
           </Link>
         </div>
 
         <div className="flex flex-col gap-2 mt-6">
           {temas.map((tema) => (
-            <Link className="hover:bg-[#293829] p-3 rounded-xl" key={tema} to="/">
+            <Link className="hover:bg-[#292929] p-3 rounded-xl" key={tema} to="/">
               {textLimiter(tema, 35)}
             </Link>
           ))}
@@ -58,7 +58,7 @@ export function AppSidebar() {
 
       {!open && (
         <button
-          className="md:hidden fixed top-4 left-4 z-50 bg-[#293829] text-white p-2 rounded-md"
+          className="md:hidden fixed top-4 left-4 z-50 bg-[#292929] text-white p-2 rounded-md"
           onClick={() => setOpen(true)}
         >
           ☰

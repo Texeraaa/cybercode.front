@@ -20,7 +20,7 @@ function App() {
             <SidebarProvider>
               <div className="flex h-screen w-screen overflow-hidden">
                 <AppSidebar />
-                <main className="flex-1 min-h-screen bg-[#121712] text-white p-6 overflow-auto">
+                <main className="flex-1 min-h-screen bg-[#000000] text-white p-6 overflow-auto">
                   <Course />
                 </main>
               </div>
