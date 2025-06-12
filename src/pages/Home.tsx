@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Code, Zap, ChevronRight, Users, Trophy } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router';
 
 export default function Home() {
   return (
@@ -41,7 +42,8 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button className="bg-[#DC143C] hover:bg-[#B91C3C] text-white font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300 hover:shadow-[0_0_30px_rgba(220,20,60,0.7)] hover:scale-105 group">
-                Começar Agora
+                <Link to="/curso">Começar Agora</Link>
+
                 <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
