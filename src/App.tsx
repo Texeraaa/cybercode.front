@@ -18,9 +18,9 @@ function App() {
           path="/curso"
           element={
             <SidebarProvider>
-              <div className="flex">
+              <div className="flex h-screen w-screen overflow-hidden">
                 <AppSidebar />
-                <main className="flex-1 p-4">
+                <main className="flex-1 min-h-screen bg-[#121712] text-white p-6 overflow-auto">
                   <Course />
                 </main>
               </div>
