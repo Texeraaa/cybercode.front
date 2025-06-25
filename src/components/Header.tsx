@@ -51,9 +51,11 @@ export default function Header() {
           </nav>
 
           {/* CTA Button */}
-          <Button className="bg-[#DC143C] hover:bg-[#B91C3C] text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(220,20,60,0.6)] hover:scale-105">
-            Entrar
-          </Button>
+          <Link to="/curso">
+            <Button className="bg-[#DC143C] hover:bg-[#B91C3C] text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(220,20,60,0.6)] hover:scale-105">
+              Entrar
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
