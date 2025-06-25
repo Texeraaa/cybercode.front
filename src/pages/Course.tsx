@@ -1,11 +1,17 @@
 import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import { useAulas } from '@/context/AulasContext';
+import type { Aula } from '@/context/AulasContext';
 
 export function useAulaAtual() {
   const { id } = useParams<{ id: string }>();
   const aulas = useAulas();
   return aulas.find((a) => a.id === String(id));
+}
+
+// Helper para verificar se uma aula está disponível
+function isAulaDisponivel(aula: Aula | undefined): boolean {
+  return Boolean(aula?.link && aula.link.trim() !== '');
 }
 
 export default function Course() {
@@ -17,6 +23,7 @@ export default function Course() {
   // Lógica para próximo conteúdo
   const currentIndex = aulas.findIndex((a) => a.id === aula.id);
   const nextAula = aulas[currentIndex + 1];
+  const isNextAulaDisponivel = isAulaDisponivel(nextAula);
 
   return (
     <div className="flex flex-col items-center py-12">
@@ -61,13 +68,22 @@ export default function Course() {
         {/* Botão Próximo Conteúdo */}
         {nextAula && (
           <div className="flex justify-end mt-8">
-            <a
-              href={`/curso/${nextAula.id}`}
-              className="px-6 py-3 rounded-lg border border-white text-white bg-black hover:bg-white hover:text-black transition-colors duration-200 font-semibold shadow-sm"
-              style={{ borderWidth: 1 }}
-            >
-              Próximo conteúdo: {nextAula.titulo}
-            </a>
+            {isNextAulaDisponivel ? (
+              <a
+                href={`/curso/${nextAula.id}`}
+                className="px-6 py-3 rounded-lg border border-white text-white bg-black hover:bg-white hover:text-black transition-colors duration-200 font-semibold shadow-sm"
+                style={{ borderWidth: 1 }}
+              >
+                Próximo conteúdo: {nextAula.titulo}
+              </a>
+            ) : (
+              <div
+                className="px-6 py-3 rounded-lg border border-white/30 text-white/50 bg-black/50 opacity-70 cursor-not-allowed font-semibold shadow-sm"
+                style={{ borderWidth: 1 }}
+              >
+                Próximo conteúdo: {nextAula.titulo} (Em breve)
+              </div>
+            )}
           </div>
         )}
       </div>

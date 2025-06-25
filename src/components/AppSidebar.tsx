@@ -3,7 +3,13 @@ import { textLimiter } from '@/helper/textLimiter';
 import { Link, useLocation } from 'react-router-dom';
 import MenuToggleButton from './MenuToggleButton';
 import { useAulas } from '@/context/AulasContext';
+import type { Aula } from '@/context/AulasContext';
 import { HiOutlineHome, HiOutlineArrowLeft } from 'react-icons/hi';
+
+// Helper para verificar se uma aula está disponível
+function isAulaDisponivel(aula: Aula): boolean {
+  return Boolean(aula.link && aula.link.trim() !== '');
+}
 
 export function AppSidebar() {
   const [open, setOpen] = useState(false);
@@ -65,7 +71,9 @@ export function AppSidebar() {
           {aulas.map((aula) => {
             const path = `/curso/${aula.id}`;
             const active = isActive(path);
-            return (
+            const isDisponivel = isAulaDisponivel(aula);
+
+            return isDisponivel ? (
               <Link
                 className={`hover:bg-[#292929] p-3 rounded-xl relative flex items-center ${active ? 'font-bold text-red-400' : ''}`}
                 key={aula.id}
@@ -78,6 +86,18 @@ export function AppSidebar() {
                   {aula.titulo.length > 35 ? textLimiter(aula.titulo, 35) : aula.titulo}
                 </span>
               </Link>
+            ) : (
+              <div
+                className={`p-3 rounded-xl relative flex items-center opacity-70 cursor-not-allowed ${active ? 'font-bold text-red-400' : 'text-white/50'}`}
+                key={aula.id}
+              >
+                {active && (
+                  <span className="absolute left-0 top-2 bottom-2 w-1 bg-red-400 rounded-r-lg" />
+                )}
+                <span className="ml-2 text-sm">
+                  {aula.titulo.length > 35 ? textLimiter(aula.titulo, 35) : aula.titulo}
+                </span>
+              </div>
             );
           })}
         </div>
