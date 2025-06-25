@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
-import { Code, Zap, ChevronRight, Users, Trophy } from 'lucide-react';
+import { Code, Zap, ChevronRight, Book } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
 
@@ -80,7 +80,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center max-w-4xl mx-auto">
             {/* Feature 1 */}
             <div className="group p-6 rounded-xl bg-gray-900/50 border border-[#DC143C]/20 hover:border-[#DC143C]/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(220,20,60,0.15)] hover:scale-105">
               <div className="mb-4">
@@ -107,22 +107,13 @@ export default function Home() {
             {/* Feature 3 */}
             <div className="group p-6 rounded-xl bg-gray-900/50 border border-[#DC143C]/20 hover:border-[#DC143C]/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(220,20,60,0.15)] hover:scale-105">
               <div className="mb-4">
-                <Users className="h-12 w-12 text-[#DC143C] group-hover:scale-110 transition-transform duration-300" />
+                <Book className="h-12 w-12 text-[#DC143C] group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">Comunidade Ativa</h3>
+              <h3 className="text-xl font-bold mb-3 text-white">Projeto Universitário</h3>
               <p className="text-gray-400">
-                Conecte-se com outros jovens programadores e mentores experientes da área.
-              </p>
-            </div>
-
-            {/* Feature 4 */}
-            <div className="group p-6 rounded-xl bg-gray-900/50 border border-[#DC143C]/20 hover:border-[#DC143C]/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(220,20,60,0.15)] hover:scale-105">
-              <div className="mb-4">
-                <Trophy className="h-12 w-12 text-[#DC143C] group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-white">Certificação</h3>
-              <p className="text-gray-400">
-                Receba certificados reconhecidos no mercado e destaque-se nas suas aplicações.
+                Plataforma desenvolvida por estudantes universitários, focada em ensinar o básico de
+                programação de forma acessível e didática. Ideal para quem está começando e quer
+                aprender de verdade!
               </p>
             </div>
           </div>
@@ -130,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative">
+      {/* <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-[#DC143C]/5 to-transparent" />
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
@@ -147,7 +138,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="border-t border-[#DC143C]/20 py-8 mt-20">

@@ -35,7 +35,7 @@ export default function Header() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DC143C] transition-all duration-300 group-hover:w-full" />
             </Link>
             <Link
-              to="#"
+              to="/sobre"
               className="text-gray-300 hover:text-[#DC143C] transition-colors duration-300 relative group"
             >
               Sobre
