@@ -21,7 +21,7 @@ export default function Course() {
   return (
     <div className="flex flex-col items-center py-12">
       <Helmet title="Curso" />
-      <div className="w-full max-w-[60vw] px-4">
+      <div className="w-full max-w-[90vw] md:max-w-[60vw] px-4">
         <section>
           <h2 className="text-2xl font-bold ml-3 mb-4">{aula.titulo}</h2>
 
