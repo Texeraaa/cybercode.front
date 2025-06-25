@@ -3,7 +3,7 @@ import { textLimiter } from '@/helper/textLimiter';
 import { Link, useLocation } from 'react-router-dom';
 import MenuToggleButton from './MenuToggleButton';
 import { useAulas } from '@/context/AulasContext';
-import { HiOutlineHome } from 'react-icons/hi';
+import { HiOutlineHome, HiOutlineArrowLeft } from 'react-icons/hi';
 
 export function AppSidebar() {
   const [open, setOpen] = useState(false);
@@ -35,6 +35,16 @@ export function AppSidebar() {
 
         {/* Topo: Visão Geral */}
         <div className="flex flex-col gap-1">
+          <Link
+            className={`hover:bg-[#292929] p-3 rounded-xl relative flex items-center ${isActive('/') ? 'font-bold text-red-400' : ''}`}
+            to="/"
+          >
+            {isActive('/') && (
+              <span className="absolute left-0 top-2 bottom-2 w-1 bg-red-400 rounded-r-lg" />
+            )}
+            <HiOutlineArrowLeft className="ml-2 mr-2 w-5 h-5" />
+            <span className="">Retornar para o início</span>
+          </Link>
           <Link
             className={`hover:bg-[#292929] p-3 rounded-xl relative flex items-center ${isActive('/curso') ? 'font-bold text-red-400' : ''}`}
             to="/curso"
