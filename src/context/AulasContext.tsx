@@ -7,6 +7,7 @@ export type Aula = {
   link: string;
   descricao: string;
   download?: { titulo: string; link: string }[];
+  duracao?: string;
 };
 
 const aulas: Aula[] = [
@@ -17,6 +18,7 @@ const aulas: Aula[] = [
     descricao:
       'Nesta aula, vamos instalar o Visual Studio Code, uma das ferramentas mais populares para desenvolvimento de software.',
     download: [{ titulo: 'Visual Studio Code', link: 'https://code.visualstudio.com/download' }],
+    duracao: '01:40',
   },
   {
     id: 'b9b9fe89-27c5-4b07-82d7-4c88dc33475a',
@@ -30,6 +32,7 @@ const aulas: Aula[] = [
         link: 'https://github.com/Texeraaa/sistema-horda/archive/refs/heads/aula01.zip',
       },
     ],
+    duracao: '12:07',
   },
   {
     id: 'ec3af9b0-5b43-49a2-ba99-65da7e0ac86a',

@@ -3,6 +3,7 @@ import { textLimiter } from '@/helper/textLimiter';
 import { Link, useLocation } from 'react-router-dom';
 import MenuToggleButton from './MenuToggleButton';
 import { useAulas } from '@/context/AulasContext';
+import { HiOutlineHome } from 'react-icons/hi';
 
 export function AppSidebar() {
   const [open, setOpen] = useState(false);
@@ -41,7 +42,8 @@ export function AppSidebar() {
             {isActive('/curso') && (
               <span className="absolute left-0 top-2 bottom-2 w-1 bg-red-400 rounded-r-lg" />
             )}
-            <span className="ml-2">Visão Geral</span>
+            <HiOutlineHome className="ml-2 mr-2 w-5 h-5" />
+            <span className="">Visão Geral</span>
           </Link>
         </div>
 
