@@ -38,16 +38,18 @@ export default function Course() {
         <section>
           <h2 className="font-bold text-2xl mb-4">Materiais para Download</h2>
           <ul className="list-disc ml-6">
-            <li>
-              <a
-                href="#"
-                className="text-blue-400 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Aula 01: PDF Slide
-              </a>
-            </li>
+            {aula.download?.map((item) => (
+              <li key={item.titulo}>
+                <a
+                  href={item.link}
+                  className="text-red-400 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.titulo}
+                </a>
+              </li>
+            ))}
           </ul>
         </section>
       </div>

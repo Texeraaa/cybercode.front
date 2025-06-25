@@ -6,6 +6,7 @@ export type Aula = {
   titulo: string;
   link: string;
   descricao: string;
+  download?: { titulo: string; link: string }[];
 };
 
 const aulas: Aula[] = [
@@ -15,6 +16,7 @@ const aulas: Aula[] = [
     link: '0r8G0l-lel4',
     descricao:
       'Nesta aula, vamos instalar o Visual Studio Code, uma das ferramentas mais populares para desenvolvimento de software.',
+    download: [{ titulo: 'Visual Studio Code', link: 'https://code.visualstudio.com/download' }],
   },
   {
     id: 'b9b9fe89-27c5-4b07-82d7-4c88dc33475a',
@@ -22,6 +24,12 @@ const aulas: Aula[] = [
     link: 'QVMMY-5lZH4',
     descricao:
       'Nesta aula, vamos construir juntos as primeiras estruturas do nosso projeto em C++: os monstros e as hordas. Você vai aprender a usar struct para agrupar dados relacionados e arrays para armazenar múltiplos elementos. Tudo de forma prática e aplicada ao jogo que estamos desenvolvendo. Ao final da aula, você saberá como criar, preencher e percorrer arrays de structs no terminal.',
+    download: [
+      {
+        titulo: 'Código da aula',
+        link: 'https://github.com/Texeraaa/sistema-horda/archive/refs/heads/aula01.zip',
+      },
+    ],
   },
   {
     id: 'ec3af9b0-5b43-49a2-ba99-65da7e0ac86a',
