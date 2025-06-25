@@ -10,13 +10,18 @@ export function useAulaAtual() {
 
 export default function Course() {
   const aula = useAulaAtual();
+  const aulas = useAulas();
 
   if (!aula) return <div className="text-center mt-10">Aula não encontrada</div>;
+
+  // Lógica para próximo conteúdo
+  const currentIndex = aulas.findIndex((a) => a.id === aula.id);
+  const nextAula = aulas[currentIndex + 1];
 
   return (
     <div className="flex flex-col items-center py-12">
       <Helmet title="Curso" />
-      <div className="w-full max-w-[700px] px-4">
+      <div className="w-full max-w-[60vw] px-4">
         <section>
           <h2 className="text-2xl font-bold ml-3 mb-4">{aula.titulo}</h2>
 
@@ -52,6 +57,19 @@ export default function Course() {
             ))}
           </ul>
         </section>
+
+        {/* Botão Próximo Conteúdo */}
+        {nextAula && (
+          <div className="flex justify-end mt-8">
+            <a
+              href={`/curso/${nextAula.id}`}
+              className="px-6 py-3 rounded-lg border border-white text-white bg-black hover:bg-white hover:text-black transition-colors duration-200 font-semibold shadow-sm"
+              style={{ borderWidth: 1 }}
+            >
+              Próximo conteúdo: {nextAula.titulo}
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

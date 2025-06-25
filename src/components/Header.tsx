@@ -21,13 +21,6 @@ export default function Header() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
-              to="/"
-              className="text-gray-300 hover:text-[#DC143C] transition-colors duration-300 relative group"
-            >
-              Início
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DC143C] transition-all duration-300 group-hover:w-full" />
-            </Link>
-            <Link
               to="/curso"
               className="text-gray-300 hover:text-[#DC143C] transition-colors duration-300 relative group"
             >
@@ -39,13 +32,6 @@ export default function Header() {
               className="text-gray-300 hover:text-[#DC143C] transition-colors duration-300 relative group"
             >
               Sobre
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DC143C] transition-all duration-300 group-hover:w-full" />
-            </Link>
-            <Link
-              to="#"
-              className="text-gray-300 hover:text-[#DC143C] transition-colors duration-300 relative group"
-            >
-              Contato
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DC143C] transition-all duration-300 group-hover:w-full" />
             </Link>
           </nav>
