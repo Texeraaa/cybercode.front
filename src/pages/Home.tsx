@@ -149,7 +149,7 @@ export default function Home() {
               <span className="text-lg font-bold text-[#DC143C]">CyberCode</span>
             </div>
             <div className="text-gray-400 text-sm">
-              © 2024 CyberCode. Todos os direitos reservados.
+              © 2025 CyberCode. Todos os direitos reservados.
             </div>
           </div>
         </div>

@@ -6,21 +6,21 @@ const integrantes = [
   {
     nome: 'Pedro Teixeira',
     idade: 20,
-    foto: '/src/assets/integrantes/pedro.png',
+    foto: '/integrantes/pedro.png',
     linkedin: 'https://www.linkedin.com/in/pedrohteixeira17/',
     github: 'https://github.com/texeraaa',
   },
   {
     nome: 'Heloisa dos Anjos',
     idade: 20,
-    foto: '/src/assets/integrantes/helo.png',
+    foto: '/integrantes/helo.png',
     linkedin:
       'https://www.linkedin.com/in/helo%C3%ADsa-gomes-dos-anjos-21270a218?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
   },
   {
     nome: 'Lais Rafaela',
     idade: 20,
-    foto: '/src/assets/integrantes/lais.png',
+    foto: '/integrantes/lais.png',
     linkedin: 'https://www.linkedin.com/in/lais-rafaela-silva/',
     github: 'https://github.com/Lais-RDS',
   },
