@@ -36,7 +36,7 @@ const aulas: Aula[] = [
   {
     id: '63dde7bd-424c-4adb-9879-01292cbda756',
     titulo: '3. Configurando Extensões para o MinGw no Vscode',
-    link: 'K1aDCiUVWzg',
+    link: 'aVwVdPrYG5U',
     descricao: 'Nesta aula, vamos configurar as extensões para o minGW no Vscode.',
     download: [
       {
@@ -57,7 +57,7 @@ const aulas: Aula[] = [
   {
     id: 'e7e5d6c9-bd34-4281-a2ad-50eee26de547',
     titulo: '4. Revisando variáveis e tipos de dados',
-    link: 'K1aDCiUVWzg',
+    link: '7SkEXuFsxsk',
     descricao: 'Nesta aula, vamos revisar os tipos de dados e variáveis em C++.',
     download: [
       {
